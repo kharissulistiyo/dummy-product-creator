@@ -1,0 +1,83 @@
+[
+    {
+      "title": "Apple",
+      "price": 12000
+    },
+    {
+      "title": "Banana",
+      "price": 8000
+    },
+    {
+      "title": "Orange",
+      "price": 14000
+    },
+    {
+      "title": "Grape",
+      "price": 15000
+    },
+    {
+      "title": "Strawberry",
+      "price": 18000
+    },
+    {
+      "title": "Blueberry",
+      "price": 20000
+    },
+    {
+      "title": "Pineapple",
+      "price": 25000
+    },
+    {
+      "title": "Mango",
+      "price": 22000
+    },
+    {
+      "title": "Peach",
+      "price": 16000
+    },
+    {
+      "title": "Plum",
+      "price": 14000
+    },
+    {
+      "title": "Kiwi",
+      "price": 17000
+    },
+    {
+      "title": "Pear",
+      "price": 13000
+    },
+    {
+      "title": "Watermelon",
+      "price": 30000
+    },
+    {
+      "title": "Cantaloupe",
+      "price": 28000
+    },
+    {
+      "title": "Cherry",
+      "price": 24000
+    },
+    {
+      "title": "Lemon",
+      "price": 11000
+    },
+    {
+      "title": "Lime",
+      "price": 12000
+    },
+    {
+      "title": "Raspberry",
+      "price": 19000
+    },
+    {
+      "title": "Blackberry",
+      "price": 20000
+    },
+    {
+      "title": "Apricot",
+      "price": 15000
+    }
+  ]
+  

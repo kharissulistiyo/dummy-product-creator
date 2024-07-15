@@ -1,0 +1,83 @@
+[
+    {
+      "title": "Printer",
+      "price": 25000
+    },
+    {
+      "title": "Fax Machine",
+      "price": 20000
+    },
+    {
+      "title": "Photocopier",
+      "price": 60000
+    },
+    {
+      "title": "Shredder",
+      "price": 15000
+    },
+    {
+      "title": "Scanner",
+      "price": 18000
+    },
+    {
+      "title": "Coffee Maker",
+      "price": 8000
+    },
+    {
+      "title": "Water Cooler",
+      "price": 20000
+    },
+    {
+      "title": "Electric Kettle",
+      "price": 5000
+    },
+    {
+      "title": "Air Purifier",
+      "price": 22000
+    },
+    {
+      "title": "Desk Lamp",
+      "price": 6000
+    },
+    {
+      "title": "Electric Fan",
+      "price": 7000
+    },
+    {
+      "title": "Heater",
+      "price": 25000
+    },
+    {
+      "title": "Office Telephone",
+      "price": 10000
+    },
+    {
+      "title": "Projector",
+      "price": 40000
+    },
+    {
+      "title": "Whiteboard",
+      "price": 15000
+    },
+    {
+      "title": "Fax Machine",
+      "price": 15000
+    },
+    {
+      "title": "Binding Machine",
+      "price": 12000
+    },
+    {
+      "title": "Document Holder",
+      "price": 3000
+    },
+    {
+      "title": "Paper Cutter",
+      "price": 7000
+    },
+    {
+      "title": "Presentation Remote",
+      "price": 5000
+    }
+  ]
+  

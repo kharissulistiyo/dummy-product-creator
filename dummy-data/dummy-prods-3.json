@@ -1,0 +1,83 @@
+[
+    {
+      "title": "Wheat",
+      "price": 12000
+    },
+    {
+      "title": "Rice",
+      "price": 15000
+    },
+    {
+      "title": "Corn",
+      "price": 13000
+    },
+    {
+      "title": "Soybeans",
+      "price": 20000
+    },
+    {
+      "title": "Barley",
+      "price": 18000
+    },
+    {
+      "title": "Oats",
+      "price": 16000
+    },
+    {
+      "title": "Potatoes",
+      "price": 8000
+    },
+    {
+      "title": "Tomatoes",
+      "price": 10000
+    },
+    {
+      "title": "Carrots",
+      "price": 9000
+    },
+    {
+      "title": "Onions",
+      "price": 8500
+    },
+    {
+      "title": "Lettuce",
+      "price": 7000
+    },
+    {
+      "title": "Cucumbers",
+      "price": 7500
+    },
+    {
+      "title": "Bell Peppers",
+      "price": 9500
+    },
+    {
+      "title": "Garlic",
+      "price": 11000
+    },
+    {
+      "title": "Spinach",
+      "price": 6500
+    },
+    {
+      "title": "Pumpkins",
+      "price": 12000
+    },
+    {
+      "title": "Squash",
+      "price": 11000
+    },
+    {
+      "title": "Apples",
+      "price": 13000
+    },
+    {
+      "title": "Oranges",
+      "price": 14000
+    },
+    {
+      "title": "Strawberries",
+      "price": 18000
+    }
+  ]
+  

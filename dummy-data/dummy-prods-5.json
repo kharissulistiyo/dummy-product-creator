@@ -1,0 +1,83 @@
+[
+    {
+      "title": "Refrigerator",
+      "price": 300000
+    },
+    {
+      "title": "Washing Machine",
+      "price": 250000
+    },
+    {
+      "title": "Microwave Oven",
+      "price": 150000
+    },
+    {
+      "title": "Dishwasher",
+      "price": 200000
+    },
+    {
+      "title": "Air Conditioner",
+      "price": 400000
+    },
+    {
+      "title": "Electric Oven",
+      "price": 180000
+    },
+    {
+      "title": "Vacuum Cleaner",
+      "price": 120000
+    },
+    {
+      "title": "Coffee Maker",
+      "price": 80000
+    },
+    {
+      "title": "Toaster",
+      "price": 30000
+    },
+    {
+      "title": "Blender",
+      "price": 50000
+    },
+    {
+      "title": "Rice Cooker",
+      "price": 60000
+    },
+    {
+      "title": "Ceiling Fan",
+      "price": 70000
+    },
+    {
+      "title": "Electric Kettle",
+      "price": 25000
+    },
+    {
+      "title": "Cooktop",
+      "price": 220000
+    },
+    {
+      "title": "Dehumidifier",
+      "price": 130000
+    },
+    {
+      "title": "Air Purifier",
+      "price": 140000
+    },
+    {
+      "title": "Sewing Machine",
+      "price": 90000
+    },
+    {
+      "title": "Water Heater",
+      "price": 170000
+    },
+    {
+      "title": "Iron",
+      "price": 40000
+    },
+    {
+      "title": "Food Processor",
+      "price": 85000
+    }
+  ]
+  

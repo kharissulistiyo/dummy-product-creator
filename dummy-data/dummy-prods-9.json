@@ -1,0 +1,83 @@
+[
+    {
+      "title": "Engine",
+      "price": 800000
+    },
+    {
+      "title": "Transmission",
+      "price": 600000
+    },
+    {
+      "title": "Alternator",
+      "price": 25000
+    },
+    {
+      "title": "Starter Motor",
+      "price": 20000
+    },
+    {
+      "title": "Battery",
+      "price": 15000
+    },
+    {
+      "title": "Radiator",
+      "price": 30000
+    },
+    {
+      "title": "Fuel Pump",
+      "price": 20000
+    },
+    {
+      "title": "Air Filter",
+      "price": 5000
+    },
+    {
+      "title": "Oil Filter",
+      "price": 3000
+    },
+    {
+      "title": "Brake Pads",
+      "price": 20000
+    },
+    {
+      "title": "Disc Brakes",
+      "price": 40000
+    },
+    {
+      "title": "Shock Absorbers",
+      "price": 35000
+    },
+    {
+      "title": "Suspension System",
+      "price": 70000
+    },
+    {
+      "title": "Timing Belt",
+      "price": 15000
+    },
+    {
+      "title": "Clutch",
+      "price": 25000
+    },
+    {
+      "title": "Exhaust System",
+      "price": 50000
+    },
+    {
+      "title": "Power Steering Pump",
+      "price": 30000
+    },
+    {
+      "title": "Fuel Injector",
+      "price": 20000
+    },
+    {
+      "title": "Wiper Blades",
+      "price": 5000
+    },
+    {
+      "title": "Headlights",
+      "price": 40000
+    }
+  ]
+  

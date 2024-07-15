@@ -1,0 +1,82 @@
+[
+  {
+    "title": "T-Shirt",
+    "price": 15000
+  },
+  {
+    "title": "Jeans",
+    "price": 35000
+  },
+  {
+    "title": "Jacket",
+    "price": 50000
+  },
+  {
+    "title": "Sweater",
+    "price": 30000
+  },
+  {
+    "title": "Shorts",
+    "price": 20000
+  },
+  {
+    "title": "Cap",
+    "price": 10000
+  },
+  {
+    "title": "Sneakers",
+    "price": 60000
+  },
+  {
+    "title": "Dress",
+    "price": 45000
+  },
+  {
+    "title": "Skirt",
+    "price": 25000
+  },
+  {
+    "title": "Blouse",
+    "price": 22000
+  },
+  {
+    "title": "Socks",
+    "price": 5000
+  },
+  {
+    "title": "Scarf",
+    "price": 15000
+  },
+  {
+    "title": "Belt",
+    "price": 12000
+  },
+  {
+    "title": "Sunglasses",
+    "price": 8000
+  },
+  {
+    "title": "Gloves",
+    "price": 7000
+  },
+  {
+    "title": "Boots",
+    "price": 75000
+  },
+  {
+    "title": "Sandals",
+    "price": 18000
+  },
+  {
+    "title": "Hat",
+    "price": 12000
+  },
+  {
+    "title": "Swimsuit",
+    "price": 30000
+  },
+  {
+    "title": "Pajamas",
+    "price": 25000
+  }
+]

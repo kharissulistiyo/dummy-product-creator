@@ -1,0 +1,83 @@
+[
+    {
+      "title": "Smartphone",
+      "price": 80000
+    },
+    {
+      "title": "Laptop",
+      "price": 60000
+    },
+    {
+      "title": "Tablet",
+      "price": 40000
+    },
+    {
+      "title": "Smartwatch",
+      "price": 20000
+    },
+    {
+      "title": "Landline Phone",
+      "price": 10000
+    },
+    {
+      "title": "Bluetooth Headset",
+      "price": 8000
+    },
+    {
+      "title": "Webcam",
+      "price": 12000
+    },
+    {
+      "title": "Router",
+      "price": 15000
+    },
+    {
+      "title": "Modem",
+      "price": 10000
+    },
+    {
+      "title": "Voice Assistant",
+      "price": 25000
+    },
+    {
+      "title": "Digital Dictaphone",
+      "price": 18000
+    },
+    {
+      "title": "Two-Way Radio",
+      "price": 22000
+    },
+    {
+      "title": "Video Conferencing System",
+      "price": 50000
+    },
+    {
+      "title": "E-Reader",
+      "price": 15000
+    },
+    {
+      "title": "Gaming Console",
+      "price": 30000
+    },
+    {
+      "title": "Satellite Phone",
+      "price": 45000
+    },
+    {
+      "title": "Pager",
+      "price": 5000
+    },
+    {
+      "title": "Smart Glasses",
+      "price": 35000
+    },
+    {
+      "title": "Portable Wi-Fi Hotspot",
+      "price": 12000
+    },
+    {
+      "title": "Conference Phone",
+      "price": 30000
+    }
+  ]
+  
