@@ -13,7 +13,7 @@ This plugin aims to help shop manager to do an easy dummy products creation. You
 ### FAQs:
 
 **Q: How to specify the dummy products data?**
-**A:** Edit the plugin's file: `wp-content/plugins/dummy-product-creator/dummy-data/dummy-prods-1.json`
+**A:** Edit the plugin's file: `wp-content/plugins/Dummy-Product-Creator/dummy-data/dummy-prods-1.json`
 
 Add your product data into that file. Follow this standard JSON format:
 
