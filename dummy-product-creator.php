@@ -215,6 +215,6 @@ class DPC_Run_Importer {
 }
 
 add_action('init', function() {
-    $debugger = new DPC_Run_Importer();
-    $debugger->run();
+    $dpc = new DPC_Run_Importer();
+    $dpc->run();
 });
