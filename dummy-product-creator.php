@@ -203,7 +203,10 @@ class DPC_Run_Importer {
     
             }    
 
-        }    
+        }   
+        
+        // Allow third party script to override product data
+        do_action('dpc_override_product_data', $data_keys, $post_id, $product);
 
     }
 
