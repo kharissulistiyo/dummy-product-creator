@@ -169,13 +169,13 @@ class DPC_Run_Importer {
         $post = array(
             'post_type'     => 'product',
             'post_status'   => $post_status,
-            'post_title'    => isset($product['title']) ? $product['title'] : '',
+            'post_title'    => isset($product['title']) ? wp_strip_all_tags($product['title']) : '',
         );
 
-        $post_id = wp_insert_post( $post );
+        $post_id = wp_insert_post( wp_slash($post) );
 
         if( $post_id && isset($product['price']) ) {
-            update_post_meta( $post_id, '_price', $product['price'] );
+            update_post_meta( $post_id, '_price', wp_slash($product['price']) );
         }
 
         return $post_id;
