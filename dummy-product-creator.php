@@ -173,12 +173,40 @@ class DPC_Run_Importer {
         );
 
         $post_id = wp_insert_post( wp_slash($post) );
-
-        if( $post_id && isset($product['price']) ) {
-            update_post_meta( $post_id, '_price', wp_slash($product['price']) );
-        }
+        
+        $this->add_product_data(array('price'), $post_id, $product);
 
         return $post_id;
+
+    }
+
+    private function add_product_data($data_keys, $post_id, $product) {
+
+        if( !is_array($data_keys) ) {
+            return;
+        }
+
+        foreach ($data_keys as $i => $key) {
+
+            if( $post_id && isset($product[$key]) ) {
+
+                $meta_key = $key;
+    
+                switch ($key) {
+                    case 'price':
+                        $meta_key = '_price';
+                        break;
+                    // More cases will be added later when needed.
+                }
+    
+                update_post_meta( $post_id, $meta_key, wp_slash($product[$key]) );
+    
+            }    
+
+        }   
+        
+        // Allow third party script to override product data
+        do_action('dpc_override_product_data', $data_keys, $post_id, $product);
 
     }
 
@@ -192,16 +220,10 @@ class DPC_Run_Importer {
 
         switch ($type) {
             case 'success':
-                $notice = sprintf('%1$s <a href="%2$s">%3$s</a>.',
-                    __('Dummy products successfully created. Congratulations!', 'dpc'),
-                    admin_url('edit.php?post_type=product'),
-                    __('Start editing here', 'dpc')
-                );
+                $notice  = __('Congratulations! Dummy products successfully created. ', 'dpc');
+                $notice .= current_user_can( 'edit_posts' ) ? sprintf('<a href="%1$s">%2$s</a>', admin_url('edit.php?post_type=product'), __('Start editing here', 'dpc')) : '';
                 break;
-            
-            default:
-                $notice = '';
-                break;
+            // More cases will be added later.
         }
 
         if( $notice != '' ) {
