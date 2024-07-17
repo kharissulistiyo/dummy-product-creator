@@ -173,29 +173,37 @@ class DPC_Run_Importer {
         );
 
         $post_id = wp_insert_post( wp_slash($post) );
-
-        $this->add_product_data('price', $post_id, $product);
+        
+        $this->add_product_data(array('price'), $post_id, $product);
 
         return $post_id;
 
     }
 
-    private function add_product_data($key, $post_id, $product) {
+    private function add_product_data($data_keys, $post_id, $product) {
 
-        if( $post_id && isset($product[$key]) ) {
+        if( !is_array($data_keys) ) {
+            return;
+        }
 
-            $meta_key = $key;
+        foreach ($data_keys as $i => $key) {
 
-            switch ($key) {
-                case 'price':
-                    $meta_key = '_price';
-                    break;
-                // More cases will be added later.
-            }
+            if( $post_id && isset($product[$key]) ) {
 
-            update_post_meta( $post_id, $meta_key, wp_slash($product[$key]) );
+                $meta_key = $key;
+    
+                switch ($key) {
+                    case 'price':
+                        $meta_key = '_price';
+                        break;
+                    // More cases will be added later when needed.
+                }
+    
+                update_post_meta( $post_id, $meta_key, wp_slash($product[$key]) );
+    
+            }    
 
-        }        
+        }    
 
     }
 
