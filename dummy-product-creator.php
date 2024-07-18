@@ -195,6 +195,7 @@ class DPC_Run_Importer {
                 switch ($key) {
                     case 'price':
                         $meta_key = '_price';
+                        update_post_meta( $post_id, '_regular_price', wp_slash($product[$key]) );
                         break;
                     // More cases will be added later when needed.
                 }
