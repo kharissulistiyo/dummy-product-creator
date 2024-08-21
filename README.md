@@ -57,6 +57,17 @@ If the `dpc_store` parameter not set, dummy-prods-1.json will be processed.
 
 To set whether products drafter or published, use `status` parameter. Example: `?status=draft`. The only accepted value for this parameter: `publish` or `draft`. If the `status` parameter not set, it will use `publish`.
 
+**Q: Can I have a form UI to easily run dummy product importer?**
+**A:** Yes, you can. Just simply add the below shortcode to any of your page.
+
+```
+[dpc_form_ui]
+```
+
+The form display would look like this:
+
+![Screen Shot 2024-08-21 at 22 29 00](https://github.com/user-attachments/assets/aad32ea8-0603-4ad9-a330-427492233143)
+
 
 **Q: Can I import dummy products from Google Sheets?**
 **A:** Yes! To help you get started, you may copy [this sheets sample](https://docs.google.com/spreadsheets/d/1m4BEyoErivDbUAkll37Guax1qVfcQFLV7enIQhJyN44/edit?usp=sharing). Ensure you don't do changes for the values of the first row's columns. Then, make your items addition necessarily. Before importing, convert the sheets to JSON by following [this instruction](https://help.cloud.just-ai.com/en/aimylogic/publication_channels/google_tables/csv_to_json/). Copy the entire JSON content, paste into `dummy-prods-1.json` (or any desired file), and run import process with proper URL parameters mentioned above.
