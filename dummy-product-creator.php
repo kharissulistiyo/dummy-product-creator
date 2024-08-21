@@ -140,7 +140,7 @@ class DPC_Run_Importer {
 
         $return = true;
 
-        if ( !current_user_can( 'manage_options' ) ) {
+        if ( !current_user_can( 'manage_options' ) || !current_user_can( 'manage_woocommerce' ) ) {
             $return = false;
         }
 
