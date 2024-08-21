@@ -148,7 +148,23 @@ class DPC_Run_Importer {
 
     }
 
+    private function noncepassed() { // Nonce verification
+
+        if (isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce')) {
+            return true;
+        }
+
+        return false;
+
+    }
+
     private function create_product($product) {
+        
+        if( isset($_GET['dpc_is_form']) && $_GET['dpc_is_form'] === 'yes' ) :
+            if( !$this->noncepassed() ) {
+                return;
+            }
+        endif;
 
         if( !$this->is_valid() ) {
             return;
@@ -240,4 +256,63 @@ class DPC_Run_Importer {
 add_action('init', function() {
     $dpc = new DPC_Run_Importer();
     $dpc->run();
+});
+
+class DPC_Form_UI {
+
+    private $nonce;
+
+    public function __construct() {
+        $this->nonce = wp_create_nonce('dpc_nonce');
+        add_shortcode('dpc_form_ui', array($this, 'form_ui'));
+    }
+
+    public function dropdown() {
+
+        $files = dpc_json_files_array();
+
+        ob_start();
+
+        echo '<select name="dpc_store" id="dpc_store">';
+        echo '<option value="all">'.__('All', 'dpc').'</option>';
+        foreach ($files as $key => $value) {
+            echo '<option value="'.esc_attr($key).'">'.esc_html($key).'</option>';
+        }
+
+        echo '</select>';
+
+        return ob_get_clean();
+
+    }
+
+    public function form_ui() {
+
+        ob_start();
+        ?>
+
+        <form method="get" action="">
+            <p>
+                <label for="dpc_store"><?php echo __('Select dummy products:', 'dpc'); ?></label>
+            </p>
+            <p>
+                <?php echo $this->dropdown(); ?>
+            </p>
+            <p>
+                <input type="hidden" name="dpc_is_form" value="yes">
+                <input type="hidden" name="dpc_nonce" value="<?php echo esc_attr($this->nonce); ?>">
+                <button type="submit"><?php echo __('Create', 'dpc'); ?></button>
+            </p>
+        </form>
+
+        <?php 
+        return ob_get_clean();
+
+    }
+
+}
+
+add_action('init', function() {
+
+    new DPC_Form_UI();
+
 });
