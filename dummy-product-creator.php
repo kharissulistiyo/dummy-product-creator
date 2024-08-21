@@ -298,6 +298,7 @@ class DPC_Form_UI {
                 <?php echo $this->dropdown(); ?>
             </p>
             <p>
+                <input type="hidden" name="dpc_run_importer" value="yes">
                 <input type="hidden" name="dpc_is_form" value="yes">
                 <input type="hidden" name="dpc_nonce" value="<?php echo esc_attr($this->nonce); ?>">
                 <button type="submit"><?php echo __('Create', 'dpc'); ?></button>
