@@ -59,18 +59,31 @@ function dpc_json_file_location() {
 }
 
 function dpc_json_decode($file) {
+    global $wp_filesystem;
 
-    $json_content = file_get_contents($file);
+    // Initialize the WordPress filesystem, no need for direct access method
+    if (empty($wp_filesystem)) {
+        require_once(ABSPATH . 'wp-admin/includes/file.php');
+        WP_Filesystem();
+    }
 
     $data = array();
 
-    if ( $json_content !== false ) {
+    // Check if the file exists
+    if ($wp_filesystem->exists($file)) {
+        // Get the file contents using WP_Filesystem
+        $json_content = $wp_filesystem->get_contents($file);
+
         // Decode the JSON data into a PHP associative array
-        $data = json_decode( $json_content, true );
+        $data = json_decode($json_content, true);
+
+        // Handle JSON decoding errors
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            return array();  // Return empty array if JSON decoding fails
+        }
     }
 
     return $data;
-
 }
 
 class DPC_Run_Importer {
