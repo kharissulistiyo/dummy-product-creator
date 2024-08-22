@@ -29,6 +29,29 @@ function dpc_json_files_array() {
     );
 
 }
+
+function dpc_nonce_verify() {
+
+    if (isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce')) {
+        return true;
+    }
+
+    return false;
+
+}
+
+function dpc_param_verificator($param, $value=null) {
+
+    $return = false;
+
+    if( isset($_GET[$param]) && dpc_nonce_verify() ) {
+        $return = true;
+    }
+
+    return $return;
+
+}
+
 function dpc_prod_dummy_json() {
 
     $store_products = dpc_json_files_array();
@@ -37,7 +60,7 @@ function dpc_prod_dummy_json() {
     $file = isset($store_products['store-1']) ? $store_products['store-1'] : '';
 
     // Check if dpc_store is set in the query string
-    if (isset($_GET['dpc_store'])) {
+    if ( dpc_param_verificator('dpc_store') ) {
         $store_key = $_GET['dpc_store'];
 
         // Validate that the dpc_store value is a key in the store_products array
