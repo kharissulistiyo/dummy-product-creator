@@ -13,6 +13,8 @@
  * Domain Path: /languages
  */
 
+defined( 'ABSPATH' ) || exit;
+
 function dpc_json_files_array() {
 
     return array( 
