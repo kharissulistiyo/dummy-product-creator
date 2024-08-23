@@ -109,6 +109,10 @@ class DPC_Run_Importer {
 
     public function run() {
 
+        if( !$this->is_valid() ) {
+            return; // Do nothing
+        }
+
         if( !$this->is_run_importer() ) {
             return; // Do nothing
         }
@@ -122,7 +126,7 @@ class DPC_Run_Importer {
 
     private function is_run_importer() {
         $return = false;
-        
+
         if ( dpc_param_verificator('dpc_run_importer', 'yes') ) {
             $return = true;
         }
