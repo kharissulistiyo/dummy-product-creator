@@ -35,30 +35,7 @@ Add your product data into that file. Follow this standard JSON format:
 ```
 
 **Q: How to run dummy products importer?**
-**A:** Add this URL parameter to any of your page link: `?dpc_run_importer=yes`
-Example: https://yourshop.com/?dpc_run_importer=yes
-
-Whith this link, the importer will automatically run once the URL loaded in your browser.
-
-To choose which dummy products to import, use `dpc_store` parameter. Example: `?dpc_store=store-2`.
-
-You can see list of currently accepted values for `dpc_store` parameter in this array variable (that is found in the `dpc_json_files_array()` function of main plugin's file):
-
-```
-$store_products  = array( 
-    'store-1' => 'dummy-prods-1.json',
-    'store-2' => 'dummy-prods-2.json',
-);
-```
-
-To import dummy products from all available JSON files, use `?dpc_store=all`. Example: https://yourshop.com/?dpc_run_importer=yes&dpc_store=all
-
-If the `dpc_store` parameter not set, dummy-prods-1.json will be processed.
-
-To set whether products drafter or published, use `status` parameter. Example: `?status=draft`. The only accepted value for this parameter: `publish` or `draft`. If the `status` parameter not set, it will use `publish`.
-
-**Q: Can I have a form UI to easily run dummy product importer?**
-**A:** Yes, you can. Just simply add the below shortcode to any of your page.
+**A:** Firstly, you'd need to create the dummy products creator form to any of your page with this shortcode:
 
 ```
 [dpc_form_ui]
@@ -68,9 +45,10 @@ The form display would look like this:
 
 ![Screen Shot 2024-08-21 at 22 29 00](https://github.com/user-attachments/assets/aad32ea8-0603-4ad9-a330-427492233143)
 
+Select desired option and just the `Create` button.
 
 **Q: Can I import dummy products from Google Sheets?**
-**A:** Yes! To help you get started, you may copy [this sheets sample](https://docs.google.com/spreadsheets/d/1m4BEyoErivDbUAkll37Guax1qVfcQFLV7enIQhJyN44/edit?usp=sharing). Ensure you don't do changes for the values of the first row's columns. Then, make your items addition necessarily. Before importing, convert the sheets to JSON by following [this instruction](https://help.cloud.just-ai.com/en/aimylogic/publication_channels/google_tables/csv_to_json/). Copy the entire JSON content, paste into `dummy-prods-1.json` (or any desired file), and run import process with proper URL parameters mentioned above.
+**A:** Yes! To help you get started, you may copy [this sheets sample](https://docs.google.com/spreadsheets/d/1m4BEyoErivDbUAkll37Guax1qVfcQFLV7enIQhJyN44/edit?usp=sharing). Ensure you don't do changes for the values of the first row's columns. Then, make your items addition necessarily. Before importing, convert the sheets to JSON by following [this instruction](https://help.cloud.just-ai.com/en/aimylogic/publication_channels/google_tables/csv_to_json/). Copy the entire JSON content, paste into `dummy-prods-1.json` (or any desired file), and run import process using the provided form.
 
 **Q: What product's data are supported?**
 **A:** Currently the plugin only supports product title and price. Other product data will be supported in the future version update.
