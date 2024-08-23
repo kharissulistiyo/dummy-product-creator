@@ -261,18 +261,18 @@ class DPC_Run_Importer {
 
     }
 
-    private function notice($type='') {
+    public function notice($type='') {
 
         if( empty($type) || $type == '' ) {
             return;
         }
 
         if( !$this->is_valid() ) {
-            return; // Do nothing
+            return ''; // Do nothing
         }
 
         if( !$this->is_run_importer() ) {
-            return; // Do nothing
+            return ''; // Do nothing
         }
 
         $notice = '';
