@@ -43,7 +43,7 @@ Add your product data into that file. Follow this standard JSON format:
 
 The form display would look like this:
 
-![Screen Shot 2024-08-21 at 22 29 00](https://github.com/user-attachments/assets/aad32ea8-0603-4ad9-a330-427492233143)
+![Screenshot 2024-08-23 at 21 46 54](https://github.com/user-attachments/assets/efd323d7-86d4-4508-889a-54ddb6b640a9)
 
 Select desired option and just the `Create` button.
 
