@@ -30,21 +30,11 @@ function dpc_json_files_array() {
 
 }
 
-function dpc_nonce_verify() {
-
-    if (isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce')) {
-        return true;
-    }
-
-    return false;
-
-}
-
 function dpc_param_verificator($param, $value=null) {
 
     $return = false;
 
-    if( isset($_GET[$param]) && dpc_nonce_verify() ) {
+    if( isset($_GET[$param]) && isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce') ) {
         $return = true;
     }
 
