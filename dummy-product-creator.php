@@ -210,12 +210,12 @@ class DPC_Run_Importer {
             return;
         }
 
-        $post_status = isset($_GET['status']) ? $_GET['status'] : 'publish';
+        $post_status = isset($_GET['status']) ? $_GET['status'] : 'draft';
 
         // Ensure that post_status is either 'draft' or 'publish'
         $allowed_statuses = array('draft', 'publish');
         if (isset($_GET['status']) && !in_array($post_status, $allowed_statuses)) {
-            $post_status = 'publish';
+            $post_status = $post_status;
         }
 
         $post = array(
@@ -333,6 +333,11 @@ class DPC_Form_UI {
             <p>
                 <?php echo $this->dropdown(); ?>
             </p>
+			<p>
+				<label for="dpc_post_status">
+        			<input id="dpc_post_status" type="checkbox" name="status" value="publish"> <?php echo __('Publish immediately', 'dpc'); ?>
+    			</label>
+			</p>
             <p>
                 <input type="hidden" name="dpc_run_importer" value="yes">
                 <input type="hidden" name="dpc_is_form" value="yes">
