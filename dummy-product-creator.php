@@ -120,8 +120,6 @@ class DPC_Run_Importer {
         $this->one_import();
         $this->all_import();
 
-        echo $this->notice('success');
-
     }
 
     private function is_run_importer() {
@@ -269,6 +267,14 @@ class DPC_Run_Importer {
             return;
         }
 
+        if( !$this->is_valid() ) {
+            return; // Do nothing
+        }
+
+        if( !$this->is_run_importer() ) {
+            return; // Do nothing
+        }
+
         $notice = '';
 
         switch ($type) {
@@ -292,6 +298,11 @@ class DPC_Run_Importer {
 add_action('init', function() {
     $dpc = new DPC_Run_Importer();
     $dpc->run();
+});
+
+add_action('dpc_before_form_ui', function() {
+    $dpc = new DPC_Run_Importer();
+    echo $dpc->notice('success');
 });
 
 class DPC_Form_UI {
@@ -324,6 +335,9 @@ class DPC_Form_UI {
     public function form_ui() {
 
         ob_start();
+
+        do_action('dpc_before_form_ui');
+
         ?>
 
         <form method="get" action="">
