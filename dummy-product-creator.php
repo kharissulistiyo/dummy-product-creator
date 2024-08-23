@@ -34,7 +34,13 @@ function dpc_param_verificator($param, $value=null) {
 
     $return = false;
 
+    $param_val = ( !empty($value) && isset($_GET[$param]) && ($_GET[$param] === $value) ) ? true : false;
+
     if( isset($_GET[$param]) && isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce') ) {
+        $return = true;
+    }
+
+    if( $param_val && isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce') ) {
         $return = true;
     }
 
@@ -117,7 +123,7 @@ class DPC_Run_Importer {
     private function is_run_importer() {
         $return = false;
         
-        if (isset($_GET['dpc_run_importer']) && ($_GET['dpc_run_importer'] === 'yes')) {
+        if ( dpc_param_verificator('dpc_run_importer', 'yes') ) {
             $return = true;
         }
 
