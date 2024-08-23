@@ -31,20 +31,20 @@ function dpc_json_files_array() {
 }
 
 function dpc_param_verificator($param, $value=null) {
-
-    $return = false;
-
+    
     $param_val = ( !empty($value) && isset($_GET[$param]) && ($_GET[$param] === $value) ) ? true : false;
 
+    if( !empty($value) ) :
+        if( $param_val && isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce') ) {
+            return true;
+        }
+    endif;
+
     if( isset($_GET[$param]) && isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce') ) {
-        $return = true;
+        return true;
     }
 
-    if( $param_val && isset($_GET['dpc_nonce']) && wp_verify_nonce($_GET['dpc_nonce'], 'dpc_nonce') ) {
-        $return = true;
-    }
-
-    return $return;
+    return false;
 
 }
 
