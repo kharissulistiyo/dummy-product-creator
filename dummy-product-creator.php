@@ -9,7 +9,7 @@
  * Author URI: https://kharis.risbl.com
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: dpc
+ * Text Domain: dummy-product-creator
  * Domain Path: /languages
  */
 
@@ -279,8 +279,8 @@ class DPC_Run_Importer {
 
         switch ($type) {
             case 'success':
-                $notice  = __('Congratulations! Dummy products successfully created. ', 'dpc');
-                $notice .= current_user_can( 'edit_posts' ) ? sprintf('<a href="%1$s">%2$s</a>', admin_url('edit.php?post_type=product'), __('Start editing here', 'dpc')) : '';
+                $notice  = __('Congratulations! Dummy products successfully created. ', 'dummy-product-creator');
+                $notice .= current_user_can( 'edit_posts' ) ? sprintf('<a href="%1$s">%2$s</a>', admin_url('edit.php?post_type=product'), __('Start editing here', 'dummy-product-creator')) : '';
                 break;
             // More cases will be added later.
         }
@@ -321,7 +321,7 @@ class DPC_Form_UI {
         ob_start();
 
         echo '<select name="dpc_store" id="dpc_store">';
-        echo '<option value="all">'.__('All', 'dpc').'</option>';
+        echo '<option value="all">'.__('All', 'dummy-product-creator').'</option>';
         foreach ($files as $key => $value) {
             echo '<option value="'.esc_attr($key).'">'.esc_html($key).'</option>';
         }
@@ -342,21 +342,21 @@ class DPC_Form_UI {
 
         <form method="get" action="">
             <p>
-                <label for="dpc_store"><?php echo __('Select dummy products:', 'dpc'); ?></label>
+                <label for="dpc_store"><?php echo __('Select dummy products:', 'dummy-product-creator'); ?></label>
             </p>
             <p>
                 <?php echo $this->dropdown(); ?>
             </p>
 			<p>
 				<label for="dpc_post_status">
-        			<input id="dpc_post_status" type="checkbox" name="status" value="publish"> <?php echo __('Publish immediately', 'dpc'); ?>
+        			<input id="dpc_post_status" type="checkbox" name="status" value="publish"> <?php echo __('Publish immediately', 'dummy-product-creator'); ?>
     			</label>
 			</p>
             <p>
                 <input type="hidden" name="dpc_run_importer" value="yes">
                 <input type="hidden" name="dpc_is_form" value="yes">
                 <input type="hidden" name="dpc_nonce" value="<?php echo esc_attr($this->nonce); ?>">
-                <button type="submit"><?php echo __('Create', 'dpc'); ?></button>
+                <button type="submit"><?php echo __('Create', 'dummy-product-creator'); ?></button>
             </p>
         </form>
 
